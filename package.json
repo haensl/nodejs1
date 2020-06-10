@@ -1,0 +1,19 @@
+{
+  "name": "nodejs1",
+  "version": "1.0.0",
+  "description": "Our first Node.js webserver.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haensl/nodejs1.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/haensl/nodejs1/issues"
+  },
+  "homepage": "https://github.com/haensl/nodejs1#readme"
+}
