@@ -2,7 +2,7 @@
 
 Code base for Node.js Session 1: Introduction
 
-[Slides](Node.js\ 1.pdf)
+[Slides](NodeJS1.pdf)
 
 To run the code, follow the usual procedure
 
