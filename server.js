@@ -1,17 +1,20 @@
 const http = require('http');
-const fs = require('fs');
+const streamer = require('./streamer');
+const foo = require('./foo.js');
 
 const hostname = '127.0.0.1';
 const port = 3000;
 
 const server = http.createServer((request, response) => {
-  response.statusCode = 200;
-  response.setHeader('Content-Type', 'text/html');
-  const stream = fs.createReadStream('./index.html', 'utf8');
-  stream.pipe(response);
-  stream.on('end', () => {
-    response.end();
-  });
+  //console.log('Request', request);
+  if (request.method === 'POST'
+    && request.url === '/') {
+    response.statusCode = 201;
+    response.end('Created');
+  } else {
+    streamer.streamTo(response);
+    console.log(`Foo can see ${foo.get()} calls in streamer`);
+  }
 });
 
 server.listen(port, hostname, () => {
